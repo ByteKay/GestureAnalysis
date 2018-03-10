@@ -1,0 +1,21 @@
+
+class TestGame : TouchManager::GestureListener
+{
+public:
+	void Initialize()
+	{
+		TouchManager::* manager = new TouchManager;
+		manager->RegisterGestureRecognizer("BaseGestureRecognizer");
+		manager->RegisterGestureListener(this);
+	}
+
+	void Update()
+	{
+		manager->Update();
+	}
+
+	void GestureEvent(BaseGestureEvent *event)
+	{
+		// to do
+	}
+}
